@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .images {
+      @apply rounded-xl h-full w-full object-cover border border-gray-300;
+    }
+  }
