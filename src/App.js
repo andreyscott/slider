@@ -1,79 +1,72 @@
-// import { useState, useEffect } from 'react';
-// import './App.css';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from "swiper";
+import React from "react";
 
-// function App() {
-//   const slides = [
-//     // eslint-disable-next-line jsx-a11y/alt-text
-//     {id: 1, content: <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript" />},
-//     {id: 2, content: <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=React" />},
-//     {id: 3, content: <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=Redux" />},
-//   ];
-//   const [active, setActive] = useState(1);
+const App = () => {
+    return (
+        <>
+            <Swiper 
+                pagination={{
+                    clickable: true,
+                    dynamicBullets: true,
+                    el: '.swiper-pagination',
+                }} 
+               
+                modules={[Pagination]} 
+                className="mySwiper w-full h-full"
+            >
+                <SwiperSlide>
+                <div>
+                <div className="w-full h-full flex justify-center items-center">
+                       <img 
+                        className="w-full h-full -z-10  relative" 
+                        src="https://spbkater.ru/wp-content/uploads/2019/11/IMG_8481.jpg"
+                    />
+                    <h1 className="text-blue-300 text-3xl absolute">Привеrrrrrrrrrrrrrrrrrт</h1>
+                    </div>
 
-//   // useEffect(() => {
-//   //   setTimeout(function(){
-//   //     nextSlide()
-//   //   }, 3000);
-//   // }, []);
+                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img 
+                        className="images"
+                        src="https://spbkater.ru/wp-content/uploads/2019/11/IMG_8481.jpg"
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img 
+                        className="rounded-xl h-64 border border-gray-300"
+                        src="https://spbkater.ru/wp-content/uploads/2019/11/IMG_8481.jpg"
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img 
+                        className="images"
+                        src="https://spbkater.ru/wp-content/uploads/2019/11/IMG_8481.jpg"
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img 
+                        className="rounded-xl h-64 border border-gray-300"
+                        src="https://spbkater.ru/wp-content/uploads/2019/11/IMG_8481.jpg"
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img 
+                        className="images"
+                        src="https://spbkater.ru/wp-content/uploads/2019/11/IMG_8481.jpg"
+                    />
+                </SwiperSlide>
 
-//   // function nextSlide(){
-//   //   setActive((active + 1) % 3);
-//   // }
+                <div className="swiper-pagination">
 
-//   // function previousSlide(){
-//   //   setActive((active + 2) % 3);
-//   // }
-  
-//   const slideClassnames = "absolute p-5 inset-0 w-full h-full  bg-pink-500 text-white flex items-center justify-center text-5xl transition-all ease-in-out duration-1000 transform slide";
-//   const activeClassNames = slideClassnames + " opacity-100";
-//   const inactiveClassNames = slideClassnames + " opacity-0";
-
-//   return (
-//     <div className="max-w-xl m-auto">
-//       <div>
-//         <div className="relative w-full h-96">
-//             {
-//               slides.map(slide => (
-//                 <div className={ active === slide.id? activeClassNames : inactiveClassNames} key={slide.id}>
-//                   {slide.content}
-//                 </div>
-//               ))
-//             }                 
-//             {/* <div className="fixed bottom-0 right-0 bg-white w-16 h-16 flex items-center justify-center text-black" onClick={() => previousSlide()}>&#x276F;</div>
-//             <div className="fixed bottom-0 right-0 bg-white w-16 h-16 mr-16 border-r border-gray-400 flex items-center justify-center text-black" onClick={() => nextSlide()}>&#x276E;</div> */}
-//         </div>
-//         <div className="flex h-3 w-full items-center justify-center mt-6">
-//           {
-//             slides.map(slide => (
-//               <div className={`h-3 w-3 mx-1 rounded-full cursor-pointer ${active === slide.id ? "bg-black" : "bg-gray-600"}`} key={slide.id} onClick={() => setActive(slide.id)} />
-//             ))
-//           }            
-//         </div> 
-//       </div>
-//     </div>    
-    
-//   );
-// }
-
-// export default App;
-
-import React from 'react'
-import Carousel from './components/Carousel';
-import Swiper from 'swiper';
-import 'swiper/css';
-
-  const swiper = new Swiper('.swiper', {
-    // configure Swiper to use modules
-    modules: [Navigation, Pagination],
-  
-  });
-
-function App() {
-  return (
-    <div>
-      <Carousel />
-    </div>
-  )
+                </div>
+            </Swiper>
+        </>
+    )
 }
-
-export default App
+  
+export default App 
