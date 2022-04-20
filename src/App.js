@@ -19,10 +19,16 @@ const App = () => {
                 className="mySwiper w-full h-full"
             >
                 <SwiperSlide>
-                    <img 
-                        className="images"
+                <div>
+                <div className="w-full h-full flex justify-center items-center">
+                       <img 
+                        className="w-full h-full -z-10  relative" 
                         src="https://spbkater.ru/wp-content/uploads/2019/11/IMG_8481.jpg"
                     />
+                    <h1 className="text-blue-300 text-3xl absolute">Привеrrrrrrrrrrrrrrrrrт</h1>
+                    </div>
+
+                </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img 
